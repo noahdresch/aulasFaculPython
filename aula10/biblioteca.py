@@ -35,3 +35,27 @@ adicionar_livro("Orgulho e Preconceito", "Jane Austen", 1813)
 adicionar_livro("1984", "George Orwell", 1949)
 adicionar_livro("Cem Anos de Solidão", "Gabriel Garcia Marquez", 1967)
 adicionar_livro("Apanhador no Campo de Centeio", "J.D. Salinger", 1951)
+
+##adicionado parte que cria o grafico
+# Listar todos os livros na biblioteca
+listar_livros()
+
+# Criar um gráfico de livros por ano
+anos = list(set(anos))  # Remove duplicatas dos anos
+anos.sort()
+
+# Contagem de livros por ano
+contagem_por_ano = [anos.count(ano) for ano in anos]
+
+# Criar um gráfico de linha
+plt.plot(anos, contagem_por_ano, marker='o', linestyle='-')
+plt.xlabel('Ano de Publicação')
+plt.ylabel('Número de Livros')
+plt.title('Distribuição de Livros na Biblioteca por Ano de Publicação')
+
+# Adicionar rótulos aos pontos de dados
+for i, valor in enumerate(contagem_por_ano):
+    plt.text(anos[i], valor, str(valor), ha='center', va='bottom')
+
+plt.grid(True)
+plt.show()
