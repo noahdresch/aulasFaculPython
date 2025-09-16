@@ -11,3 +11,6 @@ df.plot(x='Produto', y='qtde_vendida', kind='bar')
 
 # Gráfico de pizza
 df.plot(x='Produto', y='qtde_vendida', kind='pie')
+
+# Gráfico de linha
+df.plot(x='Produto', y='qtde_vendida', kind='line')
