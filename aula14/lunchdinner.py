@@ -20,3 +20,12 @@ plt.xlabel('Período (Time)')
 plt.ylabel('Média de Gastos')
 plt.title('Média de Gastos por Período (Almoço ou Jantar)')
 plt.show()
+
+#media da gorjeta por periodo (almoco ou jantar)
+#Cria um gráfico de barras com Seaborn para mostrar a média da gorjeta por período
+plt.figure(figsize=(8, 5))
+sns.barplot(x="time", y="total_bill", data=df, palette="Set3")
+plt.xlabel("Período (Time)")
+plt.ylabel("Média da Gorjeta")
+plt.title("Média da Gorjeta por Período (Almoço ou Jantar)")
+plt.show()
