@@ -30,3 +30,8 @@ for funcionario in funcionarios:
 atualizacao = ("João Silva", 5500.00, 1)
 cursor.execute("UPDATE funcionarios SET nome = ?, salario = ? WHERE id = ?", atualizacao)
 conn.commit()
+
+# Passo 6: Deletar um funcionário da tabela
+id_funcionario_para_deletar = 1
+cursor.execute("DELETE FROM funcionarios WHERE id = ?", (id_funcionario_para_deletar,))
+conn.commit()
