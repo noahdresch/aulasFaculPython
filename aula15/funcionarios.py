@@ -18,3 +18,10 @@ CREATE TABLE IF NOT EXISTS funcionarios (
 novo_funcionario = (1, "Joao", "Analista", 5000.00)
 cursor.execute("INSERT INTO funcionarios VALUES (?, ?, ?, ?)", novo_funcionario)
 conn.commit()
+
+# Passo 4: Consultar e exibir funcionários
+cursor.execute("SELECT * FROM funcionarios")
+funcionarios = cursor.fetchall()
+print("Funcionários Cadastrados:")
+for funcionario in funcionarios:
+    print(funcionario)
