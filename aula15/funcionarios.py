@@ -25,3 +25,8 @@ funcionarios = cursor.fetchall()
 print("Funcionários Cadastrados:")
 for funcionario in funcionarios:
     print(funcionario)
+
+# Passo 5: Atualizar informações de um funcionário
+atualizacao = ("João Silva", 5500.00, 1)
+cursor.execute("UPDATE funcionarios SET nome = ?, salario = ? WHERE id = ?", atualizacao)
+conn.commit()
